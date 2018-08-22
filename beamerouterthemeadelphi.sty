@@ -1,0 +1,36 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{adelphi}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=gold](0,0) rectangle(\the\paperwidth,.11\paperheight);
+  
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, brown, font=\large] at (0.5,0.5){\insertframetitle};}
+   \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+
+\defbeamertemplate*{footline}{adelphi}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth, ht=.02\paperheight,leftskip=.05\paperwidth]{white}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=.1\paperheight,leftskip=.05\paperwidth,
+    rightskip=.05\paperwidth]{footline}%
+  \begin{minipage}[c]{.25\paperwidth}
+  \insertauthor
+  \end{minipage}
+  \hfill
+  \insertframenumber
+  \hfill
+  \includegraphics[height=.08\paperheight]{Adelphi-Wordmark-Gold-RGB.png}\smallskip%
+  \end{beamercolorbox}
+  \vfill
+}
+
+
+\mode<all>

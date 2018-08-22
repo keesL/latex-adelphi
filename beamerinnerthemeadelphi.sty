@@ -1,0 +1,30 @@
+\mode<presentation>
+
+\defbeamertemplate*{background}{adelphi}[1][] {
+  \begin{tikzpicture}
+  \useasboundingbox (0, 0) rectangle(\paperwidth,\paperheight);
+  \fill[color=gold](0, 0) rectangle (\paperwidth, \paperheight);
+  \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fi
+  \end{tikzpicture}
+}
+
+
+
+% Title page
+\defbeamertemplate*{title page}{adelphi}[1][] { 
+   \vskip.2\paperheight%
+    \begin{beamercolorbox}[wd=\paperwidth,leftskip=.05\paperwidth,sep=8pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=\paperwidth,leftskip=.05\paperwidth,sep=8pt,#1]{subtitle}
+      \usebeamerfont{subtitle}\insertsubtitle\par%
+    \end{beamercolorbox}%
+}
+
+
+
+\setbeamerfont{default}{family=\sffamily}
+\mode
+<all>
