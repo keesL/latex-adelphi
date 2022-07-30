@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{adelphi}[2022/07/30 Adelphi Beamer  package]
+
+\RequirePackage{graphics}
+\RequirePackage{booktabs}
+
+\newcommand{\lesson}{14}
+\newcommand{\topic}{Lesson \lesson: R: Using Files}
+\newcounter{lessoncounter}
+
+
+% arg = START or END
+\newcommand{\clueframe}[1]{%
+    \begin{frame}%
+        \vfill%
+        \centering%
+        \Huge #1%
+        \vfill%
+    \end{frame}%
+}
+
+
+% arg = lesson topic
+\newcommand{\lessonframe}[1]{%
+\begin{frame}%
+    \vfill%
+    \Large CSC520 Data Engineering\par
+    \stepcounter{lessoncounter}
+    \large Lesson \lesson .\thelessoncounter: #1%
+    \vfill%
+\end{frame}%
+}
